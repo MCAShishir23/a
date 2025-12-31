@@ -1,0 +1,1246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayushi Katiyar - Business Development Professional</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 20px;
+            line-height: 1.6;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        /* AI Background Animation */
+        .ai-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.4;
+            pointer-events: none;
+        }
+
+        .ai-circuit {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(100, 149, 237, 0.1) 0%, transparent 20%),
+                radial-gradient(circle at 80% 80%, rgba(135, 206, 250, 0.1) 0%, transparent 20%),
+                radial-gradient(circle at 40% 40%, rgba(173, 216, 230, 0.1) 0%, transparent 20%);
+            animation: aiPulse 15s ease-in-out infinite;
+        }
+
+        @keyframes aiPulse {
+            0%, 100% { opacity: 0.4; transform: scale(1); }
+            50% { opacity: 0.6; transform: scale(1.05); }
+        }
+
+        .download-btn {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: linear-gradient(135deg, #4a90e2 0%, #63b8ff 100%);
+            color: white;
+            padding: 15px 30px;
+            border-radius: 50px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 600;
+            box-shadow: 0 5px 20px rgba(74, 144, 226, 0.4);
+            transition: all 0.3s;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .download-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: left 0.6s;
+        }
+
+        .download-btn:hover::before {
+            left: 100%;
+        }
+
+        .download-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(74, 144, 226, 0.6);
+        }
+
+        .download-btn i {
+            font-size: 18px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+            border-radius: 15px;
+            overflow: hidden;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.8);
+            position: relative;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #4a90e2 0%, #63b8ff 100%);
+            color: white;
+            padding: 50px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            animation: pulse 15s ease-in-out infinite;
+        }
+
+        /* AI Network Animation */
+        .ai-network {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.2;
+        }
+
+        .ai-node {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 50%;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .name {
+            font-size: 3em;
+            font-weight: 700;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            color: #fff;
+            position: relative;
+            display: inline-block;
+        }
+
+        .name::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.8), transparent);
+            animation: nameUnderline 3s ease-in-out infinite;
+        }
+
+        @keyframes nameUnderline {
+            0%, 100% { width: 0; left: 50%; }
+            50% { width: 100%; left: 0; }
+        }
+
+        .title {
+            font-size: 1.4em;
+            font-weight: 300;
+            margin-bottom: 25px;
+            opacity: 0.95;
+            color: #ecf0f1;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.95em;
+            color: #ecf0f1;
+            transition: transform 0.3s;
+        }
+
+        .contact-item:hover {
+            transform: translateY(-3px);
+        }
+
+        .contact-item i {
+            font-size: 1.2em;
+            color: #ffffff;
+        }
+
+        .main-content {
+            display: grid;
+            grid-template-columns: 350px 1fr;
+            gap: 0;
+        }
+
+        .sidebar {
+            background: linear-gradient(180deg, #f8f9fa 0%, #e9ecef 100%);
+            padding: 40px 30px;
+            border-right: 3px solid #4a90e2;
+        }
+
+        .content {
+            padding: 40px 50px;
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .section-title {
+            font-size: 1.6em;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #4a90e2;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -3px;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: linear-gradient(90deg, #4a90e2, #63b8ff);
+            animation: titleUnderline 3s ease-in-out infinite;
+        }
+
+        @keyframes titleUnderline {
+            0%, 100% { width: 50px; }
+            50% { width: 100%; }
+        }
+
+        .section-title i {
+            color: #4a90e2;
+        }
+
+        .profile-summary {
+            text-align: justify;
+            color: #333;
+            line-height: 1.8;
+        }
+
+        .experience-item, .education-item {
+            margin-bottom: 30px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            border-left: 4px solid #4a90e2;
+            transition: transform 0.3s, box-shadow 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .experience-item::before, .education-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(74, 144, 226, 0.05) 0%, rgba(99, 184, 255, 0.05) 100%);
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .experience-item:hover::before, .education-item:hover::before {
+            opacity: 1;
+        }
+
+        .experience-item:hover, .education-item:hover {
+            transform: translateX(5px);
+            box-shadow: 0 5px 15px rgba(74, 144, 226, 0.2);
+        }
+
+        .job-title {
+            font-size: 1.3em;
+            color: #2c3e50;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .company {
+            font-size: 1.1em;
+            color: #4a90e2;
+            font-weight: 500;
+            margin-bottom: 5px;
+        }
+
+        .date {
+            color: #6c757d;
+            font-size: 0.9em;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .responsibilities, .achievements {
+            margin-top: 15px;
+        }
+
+        .responsibilities h4, .achievements h4 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        ul li {
+            margin-bottom: 8px;
+            color: #495057;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 18px;
+        }
+
+        .skill-item {
+            background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+            padding: 16px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            border: 2px solid transparent;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .skill-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(180deg, #4a90e2 0%, #63b8ff 100%);
+            transition: width 0.4s;
+        }
+
+        .skill-item:hover {
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: 0 8px 25px rgba(74, 144, 226, 0.4);
+            border-color: #4a90e2;
+        }
+
+        .skill-item:hover::before {
+            width: 100%;
+        }
+
+        .skill-glow {
+            animation: skillPulse 3s ease-in-out infinite;
+        }
+
+        .skill-glow:nth-child(odd) {
+            animation-delay: 0.5s;
+        }
+
+        @keyframes skillPulse {
+            0%, 100% {
+                box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            }
+            50% {
+                box-shadow: 0 4px 20px rgba(74, 144, 226, 0.2);
+            }
+        }
+
+        .skill-icon {
+            background: linear-gradient(135deg, #4a90e2 0%, #63b8ff 100%);
+            width: 45px;
+            height: 45px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            box-shadow: 0 4px 12px rgba(74, 144, 226, 0.3);
+            transition: all 0.4s;
+            position: relative;
+            z-index: 1;
+        }
+
+        .skill-item:hover .skill-icon {
+            transform: rotate(360deg) scale(1.1);
+            box-shadow: 0 6px 20px rgba(74, 144, 226, 0.5);
+        }
+
+        .skill-icon i {
+            color: white;
+            font-size: 1.3em;
+        }
+
+        .skill-content {
+            flex: 1;
+            position: relative;
+            z-index: 1;
+        }
+
+        .skill-name {
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 6px;
+            font-size: 0.95em;
+            transition: color 0.3s;
+        }
+
+        .skill-item:hover .skill-name {
+            color: #4a90e2;
+        }
+
+        .skill-level {
+            background: #e9ecef;
+            height: 6px;
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .skill-bar {
+            height: 100%;
+            background: linear-gradient(90deg, #4a90e2 0%, #63b8ff 100%);
+            border-radius: 10px;
+            transition: width 1s ease-out;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .skill-bar::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.5), transparent);
+            animation: shimmer 2s infinite;
+        }
+
+        @keyframes shimmer {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+
+        .tech-skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .tech-badge {
+            background: linear-gradient(135deg, #4a90e2 0%, #63b8ff 100%);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: transform 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .tech-badge::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: left 0.6s;
+        }
+
+        .tech-badge:hover::before {
+            left: 100%;
+        }
+
+        .tech-badge:hover {
+            transform: scale(1.05);
+        }
+
+        .attributes-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .attributes-list li {
+            padding: 10px 0;
+            color: #333;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: transform 0.3s;
+        }
+
+        .attributes-list li:hover {
+            transform: translateX(5px);
+        }
+
+        .attributes-list li i {
+            color: #4a90e2;
+        }
+
+        .languages {
+            display: flex;
+            gap: 15px;
+        }
+
+        .language-item {
+            flex: 1;
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .language-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(74, 144, 226, 0.2);
+        }
+
+        .language-name {
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 5px;
+        }
+
+        .language-level {
+            color: #6c757d;
+            font-size: 0.9em;
+        }
+
+        .certifications-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .certifications-list li {
+            padding: 12px;
+            margin-bottom: 10px;
+            background: white;
+            border-radius: 8px;
+            border-left: 3px solid #4a90e2;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .certifications-list li:hover {
+            transform: translateX(5px);
+            box-shadow: 0 5px 15px rgba(74, 144, 226, 0.2);
+        }
+
+        .achievement-badge {
+            background: linear-gradient(135deg, #4a90e2 0%, #63b8ff 100%);
+            color: white;
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 0.85em;
+            display: inline-block;
+            margin-bottom: 8px;
+        }
+
+        /* AI Particle Effect */
+        .ai-particles {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .particle {
+            position: absolute;
+            background-color: rgba(74, 144, 226, 0.5);
+            border-radius: 50%;
+            animation: float 15s infinite linear;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0) translateX(0); opacity: 0; }
+            10% { opacity: 1; }
+            90% { opacity: 1; }
+            100% { transform: translateY(-100vh) translateX(100px); opacity: 0; }
+        }
+
+        /* AI Glitch Effect */
+        .ai-glitch {
+            position: relative;
+            display: inline-block;
+        }
+
+        .ai-glitch::before, .ai-glitch::after {
+            content: attr(data-text);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+        }
+
+        .ai-glitch:hover::before {
+            animation: glitch-1 0.3s infinite;
+            color: #4a90e2;
+            opacity: 0.8;
+            z-index: -1;
+        }
+
+        .ai-glitch:hover::after {
+            animation: glitch-2 0.3s infinite;
+            color: #63b8ff;
+            opacity: 0.8;
+            z-index: -2;
+        }
+
+        @keyframes glitch-1 {
+            0% { clip: rect(42px, 9999px, 44px, 0); transform: skew(0.5deg); }
+            5% { clip: rect(12px, 9999px, 20px, 0); transform: skew(0.5deg); }
+            10% { clip: rect(33px, 9999px, 50px, 0); transform: skew(0.5deg); }
+            15% { clip: rect(10px, 9999px, 70px, 0); transform: skew(0.5deg); }
+            20% { clip: rect(40px, 9999px, 60px, 0); transform: skew(0.5deg); }
+            25% { clip: rect(20px, 9999px, 30px, 0); transform: skew(0.5deg); }
+            30% { clip: rect(50px, 9999px, 70px, 0); transform: skew(0.5deg); }
+            35% { clip: rect(15px, 9999px, 25px, 0); transform: skew(0.5deg); }
+            40% { clip: rect(35px, 9999px, 55px, 0); transform: skew(0.5deg); }
+            45% { clip: rect(5px, 9999px, 25px, 0); transform: skew(0.5deg); }
+            50% { clip: rect(45px, 9999px, 65px, 0); transform: skew(0.5deg); }
+            55% { clip: rect(25px, 9999px, 35px, 0); transform: skew(0.5deg); }
+            60% { clip: rect(55px, 9999px, 75px, 0); transform: skew(0.5deg); }
+            65% { clip: rect(30px, 9999px, 40px, 0); transform: skew(0.5deg); }
+            70% { clip: rect(60px, 9999px, 80px, 0); transform: skew(0.5deg); }
+            75% { clip: rect(40px, 9999px, 50px, 0); transform: skew(0.5deg); }
+            80% { clip: rect(70px, 9999px, 90px, 0); transform: skew(0.5deg); }
+            85% { clip: rect(50px, 9999px, 60px, 0); transform: skew(0.5deg); }
+            90% { clip: rect(80px, 9999px, 100px, 0); transform: skew(0.5deg); }
+            95% { clip: rect(60px, 9999px, 70px, 0); transform: skew(0.5deg); }
+            100% { clip: rect(42px, 9999px, 44px, 0); transform: skew(0.5deg); }
+        }
+
+        @keyframes glitch-2 {
+            0% { clip: rect(42px, 9999px, 44px, 0); transform: skew(0.5deg); }
+            5% { clip: rect(12px, 9999px, 20px, 0); transform: skew(-0.5deg); }
+            10% { clip: rect(33px, 9999px, 50px, 0); transform: skew(-0.5deg); }
+            15% { clip: rect(10px, 9999px, 70px, 0); transform: skew(-0.5deg); }
+            20% { clip: rect(40px, 9999px, 60px, 0); transform: skew(-0.5deg); }
+            25% { clip: rect(20px, 9999px, 30px, 0); transform: skew(-0.5deg); }
+            30% { clip: rect(50px, 9999px, 70px, 0); transform: skew(-0.5deg); }
+            35% { clip: rect(15px, 9999px, 25px, 0); transform: skew(-0.5deg); }
+            40% { clip: rect(35px, 9999px, 55px, 0); transform: skew(-0.5deg); }
+            45% { clip: rect(5px, 9999px, 25px, 0); transform: skew(-0.5deg); }
+            50% { clip: rect(45px, 9999px, 65px, 0); transform: skew(-0.5deg); }
+            55% { clip: rect(25px, 9999px, 35px, 0); transform: skew(-0.5deg); }
+            60% { clip: rect(55px, 9999px, 75px, 0); transform: skew(-0.5deg); }
+            65% { clip: rect(30px, 9999px, 40px, 0); transform: skew(-0.5deg); }
+            70% { clip: rect(60px, 9999px, 80px, 0); transform: skew(-0.5deg); }
+            75% { clip: rect(40px, 9999px, 50px, 0); transform: skew(-0.5deg); }
+            80% { clip: rect(70px, 9999px, 90px, 0); transform: skew(-0.5deg); }
+            85% { clip: rect(50px, 9999px, 60px, 0); transform: skew(-0.5deg); }
+            90% { clip: rect(80px, 9999px, 100px, 0); transform: skew(-0.5deg); }
+            95% { clip: rect(60px, 9999px, 70px, 0); transform: skew(-0.5deg); }
+            100% { clip: rect(42px, 9999px, 44px, 0); transform: skew(-0.5deg); }
+        }
+
+        @media (max-width: 968px) {
+            .main-content {
+                grid-template-columns: 1fr;
+            }
+
+            .sidebar {
+                border-right: none;
+                border-bottom: 3px solid #4a90e2;
+            }
+
+            .name {
+                font-size: 2em;
+            }
+
+            .contact-info {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .download-btn {
+                top: 10px;
+                right: 10px;
+                padding: 12px 20px;
+                font-size: 14px;
+            }
+        }
+
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            .container {
+                box-shadow: none;
+                border-radius: 0;
+            }
+            .download-btn {
+                display: none;
+            }
+            .skill-item, .experience-item, .education-item {
+                break-inside: avoid;
+            }
+            .ai-bg, .ai-particles, .ai-network {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- AI Background Effects -->
+    <div class="ai-bg">
+        <div class="ai-circuit"></div>
+    </div>
+    
+    <!-- AI Particles -->
+    <div class="ai-particles" id="particles"></div>
+
+    <button class="download-btn" onclick="downloadPDF()">
+        <i class="fas fa-download"></i>
+        Download CV
+    </button>
+
+    <div class="container">
+        <div class="header">
+            <!-- AI Network Animation -->
+            <div class="ai-network" id="aiNetwork"></div>
+            
+            <div class="header-content">
+                <h1 class="name ai-glitch" data-text="Ayushi Katiyar">Ayushi Katiyar</h1>
+                <p class="title">Business Development Executive | Sales Professional | Strategic Growth Specialist</p>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>ayushikatiyar2001@gmail.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+91 9450107900</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Kannauj, Uttar Pradesh</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <div class="sidebar">
+                <div class="section">
+                    <h2 class="section-title">
+                        <i class="fas fa-star"></i>
+                        Core Skills
+                    </h2>
+                    <div class="skills-grid">
+                        <div class="skill-item skill-glow">
+                            <div class="skill-icon">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <div class="skill-content">
+                                <div class="skill-name">Lead Generation</div>
+                                <div class="skill-level">
+                                    <div class="skill-bar" style="width: 95%"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skill-item skill-glow">
+                            <div class="skill-icon">
+                                <i class="fas fa-handshake"></i>
+                            </div>
+                            <div class="skill-content">
+                                <div class="skill-name">Client Acquisition</div>
+                                <div class="skill-level">
+                                    <div class="skill-bar" style="width: 92%"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skill-item skill-glow">
+                            <div class="skill-icon">
+                                <i class="fas fa-comments"></i>
+                            </div>
+                            <div class="skill-content">
+                                <div class="skill-name">Communication</div>
+                                <div class="skill-level">
+                                    <div class="skill-bar" style="width: 98%"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skill-item skill-glow">
+                            <div class="skill-icon">
+                                <i class="fas fa-balance-scale"></i>
+                            </div>
+                            <div class="skill-content">
+                                <div class="skill-name">Negotiation</div>
+                                <div class="skill-level">
+                                    <div class="skill-bar" style="width: 90%"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skill-item skill-glow">
+                            <div class="skill-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div class="skill-content">
+                                <div class="skill-name">CRM Management</div>
+                                <div class="skill-level">
+                                    <div class="skill-bar" style="width: 88%"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skill-item skill-glow">
+                            <div class="skill-icon">
+                                <i class="fas fa-search"></i>
+                            </div>
+                            <div class="skill-content">
+                                <div class="skill-name">Market Research</div>
+                                <div class="skill-level">
+                                    <div class="skill-bar" style="width: 85%"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skill-item skill-glow">
+                            <div class="skill-icon">
+                                <i class="fas fa-bullseye"></i>
+                            </div>
+                            <div class="skill-content">
+                                <div class="skill-name">Sales Strategy</div>
+                                <div class="skill-level">
+                                    <div class="skill-bar" style="width: 93%"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skill-item skill-glow">
+                            <div class="skill-icon">
+                                <i class="fas fa-user-tie"></i>
+                            </div>
+                            <div class="skill-content">
+                                <div class="skill-name">Relationship Mgmt</div>
+                                <div class="skill-level">
+                                    <div class="skill-bar" style="width: 96%"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skill-item skill-glow">
+                            <div class="skill-icon">
+                                <i class="fas fa-presentation"></i>
+                            </div>
+                            <div class="skill-content">
+                                <div class="skill-name">Presentations</div>
+                                <div class="skill-level">
+                                    <div class="skill-bar" style="width: 91%"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skill-item skill-glow">
+                            <div class="skill-icon">
+                                <i class="fas fa-chart-bar"></i>
+                            </div>
+                            <div class="skill-content">
+                                <div class="skill-name">Data Analysis</div>
+                                <div class="skill-level">
+                                    <div class="skill-bar" style="width: 87%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h2 class="section-title">
+                        <i class="fas fa-code"></i>
+                        Technical Skills
+                    </h2>
+                    <div class="tech-skills">
+                        <div class="tech-badge">
+                            <i class="fas fa-table"></i>
+                            <span>MS Excel</span>
+                        </div>
+                        <div class="tech-badge">
+                            <i class="fas fa-presentation"></i>
+                            <span>PowerPoint</span>
+                        </div>
+                        <div class="tech-badge">
+                            <i class="fas fa-database"></i>
+                            <span>CRM Tools</span>
+                        </div>
+                        <div class="tech-badge">
+                            <i class="fas fa-digital-tachograph"></i>
+                            <span>Digital Marketing</span>
+                        </div>
+                        <div class="tech-badge">
+                            <i class="fas fa-chart-pie"></i>
+                            <span>Google Analytics</span>
+                        </div>
+                        <div class="tech-badge">
+                            <i class="fas fa-envelope-open-text"></i>
+                            <span>Email Marketing</span>
+                        </div>
+                        <div class="tech-badge">
+                            <i class="fab fa-linkedin"></i>
+                            <span>LinkedIn Sales</span>
+                        </div>
+                        <div class="tech-badge">
+                            <i class="fas fa-file-alt"></i>
+                            <span>MS Word</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h2 class="section-title">
+                        <i class="fas fa-certificate"></i>
+                        Certifications
+                    </h2>
+                    <ul class="certifications-list">
+                        <li><strong>C Training</strong> - AICTE</li>
+                        <li><strong>Digital Marketing</strong> - Online Certification</li>
+                        <li><strong>Communication Skills Enhancement</strong> - TCS iON</li>
+                        <li><strong>Business Communication</strong> - Professional Course</li>
+                        <li><strong>Sales & Marketing</strong> - Workshop Completion</li>
+                    </ul>
+                </div>
+
+                <div class="section">
+                    <h2 class="section-title">
+                        <i class="fas fa-language"></i>
+                        Languages
+                    </h2>
+                    <div class="languages">
+                        <div class="language-item">
+                            <div class="language-name">English</div>
+                            <div class="language-level">Professional</div>
+                        </div>
+                        <div class="language-item">
+                            <div class="language-name">Hindi</div>
+                            <div class="language-level">Native</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h2 class="section-title">
+                        <i class="fas fa-heart"></i>
+                        Attributes
+                    </h2>
+                    <ul class="attributes-list">
+                        <li><i class="fas fa-check-circle"></i> Quick Learner & Adaptable</li>
+                        <li><i class="fas fa-check-circle"></i> Team Player with Leadership</li>
+                        <li><i class="fas fa-check-circle"></i> Strong Analytical Skills</li>
+                        <li><i class="fas fa-check-circle"></i> Target Oriented</li>
+                        <li><i class="fas fa-check-circle"></i> Positive Attitude</li>
+                        <li><i class="fas fa-check-circle"></i> Problem Solving</li>
+                        <li><i class="fas fa-check-circle"></i> Time Management</li>
+                        <li><i class="fas fa-check-circle"></i> Customer Focused</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="content">
+                <div class="section">
+                    <h2 class="section-title">
+                        <i class="fas fa-user-circle"></i>
+                        Profile Summary
+                    </h2>
+                    <p class="profile-summary">
+                        Dynamic and results-driven Business Development Executive with proven expertise in driving revenue growth, building strategic client relationships, and executing data-driven sales strategies. Currently contributing to the success of 3i Pvt. Ltd., Noida, where I have demonstrated exceptional performance by exceeding sales targets and onboarding high-value clients. With a strong foundation in BBA and specialized training in digital marketing and communication, I bring a comprehensive understanding of market dynamics, customer psychology, and business development best practices. Passionate about leveraging analytical insights and creative problem-solving to identify opportunities, negotiate win-win partnerships, and deliver measurable business outcomes. Committed to continuous learning and professional excellence in the ever-evolving business landscape.
+                    </p>
+                </div>
+
+                <div class="section">
+                    <h2 class="section-title">
+                        <i class="fas fa-briefcase"></i>
+                        Professional Experience
+                    </h2>
+                    <div class="experience-item">
+                        <div class="job-title">Business Development Executive</div>
+                        <div class="company">3i Pvt. Ltd., Noida (Sector 58)</div>
+                        <div class="date">
+                            <i class="far fa-calendar-alt"></i>
+                            November 2024 – Present
+                        </div>
+                        
+                        <div class="responsibilities">
+                            <h4><i class="fas fa-tasks"></i> Key Responsibilities:</h4>
+                            <ul>
+                                <li>Spearhead lead generation initiatives through multi-channel outreach including cold calling, email campaigns, social media engagement, and strategic networking</li>
+                                <li>Develop and nurture long-term client relationships through consistent follow-ups, personalized communication, and value-added consultations</li>
+                                <li>Design and deliver compelling business proposals, sales presentations, and marketing pitches tailored to client needs and industry trends</li>
+                                <li>Collaborate cross-functionally with marketing, sales, and product teams to align strategies and achieve monthly/quarterly revenue objectives</li>
+                                <li>Conduct comprehensive competitor analysis and market research to identify emerging opportunities and industry gaps</li>
+                                <li>Maintain detailed and accurate records of all client interactions, deal progress, and sales pipeline activities using CRM platforms</li>
+                                <li>Create impactful marketing collateral, case studies, and strategic content to enhance brand visibility and market positioning</li>
+                                <li>Participate in industry events, trade shows, and networking forums to expand business network and generate quality leads</li>
+                                <li>Provide regular sales forecasts, performance reports, and strategic recommendations to senior management</li>
+                                <li>Mentor junior team members and share best practices for effective client engagement and closing techniques</li>
+                            </ul>
+                        </div>
+
+                        <div class="achievements">
+                            <h4><i class="fas fa-trophy"></i> Key Achievements:</h4>
+                            <span class="achievement-badge">⭐ Top Performer</span>
+                            <ul>
+                                <li><strong>Exceeded Targets:</strong> Achieved 120% of sales target in the first quarter, demonstrating exceptional sales acumen</li>
+                                <li><strong>Client Acquisition:</strong> Successfully onboarded 15+ high-value clients from IT, SaaS, and professional service sectors</li>
+                                <li><strong>Recognition:</strong> Awarded "Best Communicator" by senior management for exceptional presentation and negotiation skills</li>
+                                <li><strong>Process Improvement:</strong> Implemented new lead qualification framework that improved conversion rate by 25%</li>
+                                <li><strong>Customer Retention:</strong> Maintained 95% client retention rate through proactive relationship management</li>
+                                <li><strong>Team Contribution:</strong> Collaborated on strategic initiatives that contributed to 30% overall team growth</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h2 class="section-title">
+                        <i class="fas fa-graduation-cap"></i>
+                        Education
+                    </h2>
+                    <div class="education-item">
+                        <div class="job-title">Bachelor of Business Administration (BBA)</div>
+                        <div class="company">Maharana Pratap Group of Institution, Kanpur</div>
+                        <div class="date">
+                            <i class="far fa-calendar-alt"></i>
+                            2021 – 2024
+                        </div>
+                        <ul>
+                            <li>Specialized in Marketing and Business Development</li>
+                            <li>Completed coursework in Sales Management, Consumer Behavior, Market Research, and Strategic Management</li>
+                            <li>Led multiple academic projects on business strategy and market analysis</li>
+                            <li>Active member of Business Development Club and Marketing Forum</li>
+                        </ul>
+                    </div>
+
+                    <div class="education-item">
+                        <div class="job-title">Higher Secondary (CBSE)</div>
+                        <div class="company">Kannauj Public School, Kannauj</div>
+                        <div class="date">
+                            <i class="far fa-calendar-alt"></i>
+                            2019 – 2021
+                        </div>
+                        <ul>
+                            <li>Stream: Commerce with Business Studies</li>
+                            <li>Participated in inter-school business plan competitions and debate forums</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h2 class="section-title">
+                        <i class="fas fa-lightbulb"></i>
+                        Additional Expertise
+                    </h2>
+                    <ul>
+                        <li><strong>B2B & B2C Sales:</strong> Experience in both enterprise sales and consumer-facing business development</li>
+                        <li><strong>Sales Forecasting:</strong> Proficient in creating accurate sales projections and pipeline analysis</li>
+                        <li><strong>Contract Negotiation:</strong> Skilled in structuring deals and negotiating favorable terms</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Create AI particles
+        function createParticles() {
+            const particlesContainer = document.getElementById('particles');
+            const particleCount = 30;
+            
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.classList.add('particle');
+                
+                // Random size between 2px and 6px
+                const size = Math.random() * 4 + 2;
+                particle.style.width = `${size}px`;
+                particle.style.height = `${size}px`;
+                
+                // Random position
+                const posX = Math.random() * 100;
+                const posY = Math.random() * 100;
+                particle.style.left = `${posX}%`;
+                particle.style.top = `${posY}%`;
+                
+                // Random animation duration between 10s and 20s
+                const duration = Math.random() * 10 + 10;
+                particle.style.animationDuration = `${duration}s`;
+                
+                // Random delay
+                const delay = Math.random() * 5;
+                particle.style.animationDelay = `${delay}s`;
+                
+                particlesContainer.appendChild(particle);
+            }
+        }
+        
+        // Create AI network nodes
+        function createAINetwork() {
+            const networkContainer = document.getElementById('aiNetwork');
+            const nodeCount = 15;
+            const nodes = [];
+            
+            // Create nodes
+            for (let i = 0; i < nodeCount; i++) {
+                const node = document.createElement('div');
+                node.classList.add('ai-node');
+                
+                // Random position
+                const posX = Math.random() * 100;
+                const posY = Math.random() * 100;
+                node.style.left = `${posX}%`;
+                node.style.top = `${posY}%`;
+                
+                networkContainer.appendChild(node);
+                nodes.push({ element: node, x: posX, y: posY });
+            }
+            
+            // Create connections between nodes
+            const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+            svg.style.position = 'absolute';
+            svg.style.top = '0';
+            svg.style.left = '0';
+            svg.style.width = '100%';
+            svg.style.height = '100%';
+            svg.style.pointerEvents = 'none';
+            
+            for (let i = 0; i < nodes.length; i++) {
+                for (let j = i + 1; j < nodes.length; j++) {
+                    // Only connect nodes that are close enough
+                    const distance = Math.sqrt(
+                        Math.pow(nodes[i].x - nodes[j].x, 2) + 
+                        Math.pow(nodes[i].y - nodes[j].y, 2)
+                    );
+                    
+                    if (distance < 30) {
+                        const line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+                        line.setAttribute('x1', `${nodes[i].x}%`);
+                        line.setAttribute('y1', `${nodes[i].y}%`);
+                        line.setAttribute('x2', `${nodes[j].x}%`);
+                        line.setAttribute('y2', `${nodes[j].y}%`);
+                        line.setAttribute('stroke', 'rgba(255, 255, 255, 0.3)');
+                        line.setAttribute('stroke-width', '1');
+                        
+                        svg.appendChild(line);
+                    }
+                }
+            }
+            
+            networkContainer.appendChild(svg);
+        }
+        
+        // Initialize AI effects
+        document.addEventListener('DOMContentLoaded', function() {
+            createParticles();
+            createAINetwork();
+            
+            // Animate skill bars on scroll
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const skillBars = entry.target.querySelectorAll('.skill-bar');
+                        skillBars.forEach(bar => {
+                            const width = bar.style.width;
+                            bar.style.width = '0';
+                            setTimeout(() => {
+                                bar.style.width = width;
+                            }, 100);
+                        });
+                    }
+                });
+            }, observerOptions);
+            
+            const skillsSection = document.querySelector('.skills-grid');
+            if (skillsSection) {
+                observer.observe(skillsSection);
+            }
+        });
+        
+        // Download PDF function
+        function downloadPDF() {
+            // In a real implementation, this would generate and download a PDF
+            // For now, we'll just show an alert
+            alert('PDF download functionality would be implemented here. In a real application, this would generate a PDF version of the CV.');
+        }
+    </script>
+</body>
+</html>
